@@ -249,3 +249,116 @@ WARNING - 2016-06-22 15:15:16 --> Fuel\Core\Fuel::init - The configured locale e
 WARNING - 2016-06-22 15:15:39 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2016-06-22 15:15:42 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2016-06-22 15:15:47 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 18:32:37 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 18:32:38 --> 1049 - SQLSTATE[HY000] [1049] Unknown database 'fuelphp' in E:\Project\fuelphp\fuel\core\classes\database\pdo\connection.php on line 112
+WARNING - 2016-06-22 18:33:27 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 18:33:27 --> 1146 - SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fuelphp.th_users' doesn't exist with query: "SELECT * FROM `th_users`" in E:\Project\fuelphp\fuel\core\classes\database\pdo\connection.php on line 253
+WARNING - 2016-06-22 18:33:35 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 19:38:05 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 19:38:06 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 19:38:06 --> 1046 - No database selected [ SELECT `t0`.`id` AS `t0_c0`, `t0`.`username` AS `t0_c1`, `t0`.`password` AS `t0_c2`, `t0`.`email` AS `t0_c3`, `t0`.`created_at` AS `t0_c4`, `t0`.`updated_at` AS `t0_c5` FROM `users` AS `t0` ] in E:\Project\fuelphp\fuel\core\classes\database\mysqli\connection.php on line 292
+WARNING - 2016-06-22 19:39:43 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 19:39:44 --> 1146 - Table 'fuelphp.users' doesn't exist [ SELECT `t0`.`id` AS `t0_c0`, `t0`.`username` AS `t0_c1`, `t0`.`password` AS `t0_c2`, `t0`.`email` AS `t0_c3`, `t0`.`created_at` AS `t0_c4`, `t0`.`updated_at` AS `t0_c5` FROM `users` AS `t0` ] in E:\Project\fuelphp\fuel\core\classes\database\mysqli\connection.php on line 292
+WARNING - 2016-06-22 19:41:31 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 19:43:04 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 19:43:04 --> 1146 - Table 'fuelphp.th_users' doesn't exist [ SELECT `th_t0`.`id` AS `t0_c0`, `th_t0`.`username` AS `t0_c1`, `th_t0`.`password` AS `t0_c2`, `th_t0`.`email` AS `t0_c3`, `th_t0`.`created_at` AS `t0_c4`, `th_t0`.`updated_at` AS `t0_c5` FROM `th_users` AS `th_t0` ] in E:\Project\fuelphp\fuel\core\classes\database\mysqli\connection.php on line 292
+WARNING - 2016-06-22 19:43:18 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 19:43:20 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 19:44:02 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 19:59:14 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 19:59:16 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:02:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:02:51 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:04:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:04:43 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:04:45 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:05:40 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:05:45 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:05:45 --> 1146 - Table 'fuelphp.th_monkeys' doesn't exist [ SELECT `th_t0`.`id` AS `t0_c0`, `th_t0`.`name` AS `t0_c1`, `th_t0`.`description` AS `t0_c2`, `th_t0`.`created_at` AS `t0_c3`, `th_t0`.`updated_at` AS `t0_c4` FROM `th_monkeys` AS `th_t0` ] in E:\Project\fuelphp\fuel\core\classes\database\mysqli\connection.php on line 292
+WARNING - 2016-06-22 20:09:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:10:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:11:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:11:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:13:27 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:13:33 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:13:34 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:13:35 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:14:02 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:14:03 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:14:05 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:15:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:15:27 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:15:27 --> shutdown - The session data stored by the application in the cookie exceeds 4Kb. Select a different session storage driver. in E:\Project\fuelphp\fuel\core\classes\session\driver.php on 476
+WARNING - 2016-06-22 20:18:05 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:18:07 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:19:28 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:19:29 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:19:29 --> Fatal Error - Call to a member function get_message() on a non-object in E:\Project\fuelphp\fuel\app\classes\controller\backend\user.php on line 29
+WARNING - 2016-06-22 20:21:03 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:21:04 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:21:04 --> Warning - Missing argument 1 for Fuel\Core\Validation::get_message(), called in E:\Project\fuelphp\fuel\app\classes\controller\backend\user.php on line 29 and defined in E:\Project\fuelphp\fuel\core\classes\validation.php on line 236
+WARNING - 2016-06-22 20:23:17 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:23:19 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:23:20 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:23:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:23:22 --> Notice - Undefined index: username in E:\Project\fuelphp\fuel\app\classes\controller\backend\user.php on line 28
+WARNING - 2016-06-22 20:25:02 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:25:03 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:25:03 --> Notice - Undefined variable: error in E:\Project\fuelphp\fuel\app\classes\controller\backend\user.php on line 30
+WARNING - 2016-06-22 20:25:31 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:25:33 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:25:34 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:25:34 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:26:29 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:26:30 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:27:07 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:27:09 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:27:26 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:27:26 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:27:26 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:27:27 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:27:27 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:28:14 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:28:14 --> Notice - Undefined variable: error in E:\Project\fuelphp\fuel\app\views\backend\user\_form.php on line 38
+WARNING - 2016-06-22 20:28:59 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:28:59 --> Notice - Undefined variable: error in E:\Project\fuelphp\fuel\app\views\backend\user\_form.php on line 38
+WARNING - 2016-06-22 20:29:00 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:29:00 --> Notice - Undefined variable: error in E:\Project\fuelphp\fuel\app\views\backend\user\_form.php on line 38
+WARNING - 2016-06-22 20:29:01 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:29:01 --> Notice - Undefined variable: error in E:\Project\fuelphp\fuel\app\views\backend\user\_form.php on line 38
+WARNING - 2016-06-22 20:29:13 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:29:13 --> Notice - Undefined variable: error in E:\Project\fuelphp\fuel\app\views\backend\user\_form.php on line 38
+WARNING - 2016-06-22 20:29:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:29:56 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:29:56 --> Notice - Undefined variable: error in E:\Project\fuelphp\fuel\app\views\backend\user\_form.php on line 38
+WARNING - 2016-06-22 20:30:34 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:32:24 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:32:25 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2016-06-22 20:32:25 --> Fatal Error - Call to a member function get_message() on a non-object in E:\Project\fuelphp\fuel\app\views\backend\user\_form.php on line 11
+WARNING - 2016-06-22 20:32:51 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:32:52 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:33:22 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:33:23 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:35:28 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:35:29 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:36:29 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:36:30 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:38:33 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:38:35 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:39:01 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:39:02 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:39:04 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:39:48 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:39:49 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:39:50 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:13 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:14 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:15 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:16 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:16 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:17 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:17 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:29 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:31 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:32 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2016-06-22 20:40:42 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.

@@ -4,11 +4,17 @@
  */
 
 return array(
-	'default' => array(
-		'connection'  => array(
-			'dsn'        => 'mysql:host=localhost;dbname=fuelphp',
-			'username'   => 'root',
-			'password'   => '',
-		),
-	),
+    'default' => array(
+        'type' => 'mysqli',
+        'connection'  => array(
+            'hostname'  => 'localhost',
+            'port'      => '3306',
+            'database'  => 'fuelphp',
+            'username'  => 'root',
+            'password'  => '',
+        ),
+        'table_prefix'   => 'th_',
+        'charset'        => 'utf8',
+        'enable_cache'   => true,
+    ),
 );

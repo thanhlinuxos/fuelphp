@@ -14,10 +14,21 @@ class Controller_Backend_User extends Controller_Template
     
     public function action_create()
     {
-        $data = array();
+        $data = array(
+            'error' => array()
+        );
         if(Input::method() === 'POST')
         {
-            print_r(Input::post());exit;
+            $val = Model_User::validate('create');
+            if($val->run())
+            {
+                
+            }
+            else
+            {
+                $data['error'] = $val->error();
+            }
+           
         }
         $this->template->title = 'Create User';
         $this->template->container = View::forge('backend/user/create', $data);
