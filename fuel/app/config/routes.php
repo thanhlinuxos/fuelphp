@@ -5,5 +5,6 @@ return array(
 
     // Backend
     'acp'   => 'backend/dashboard',
-    'acp/user'   => 'backend/user'
+    'acp/user'   => 'backend/user',
+    'acp/user/create'   => 'backend/user/create'
 );

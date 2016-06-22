@@ -204,12 +204,9 @@ return array(
 	/**
 	 * Validation settings
 	 */
-	// 'validation' => array(
-		/**
-		 * Whether to fallback to global when a value is not found in the input array.
-		 */
-		// 'global_input_fallback' => true,
-	// ),
+	'validation' => array(
+            'global_input_fallback' => true,
+	),
 
 	/**
 	 * Controller class prefix
@@ -274,7 +271,7 @@ return array(
 		 */
                 'packages'  => array(
                     'orm',
-                    'auth' => PKGPATH.'auth/'
+                    'auth'
                 ),
 
 		/**

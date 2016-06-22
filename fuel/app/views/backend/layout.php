@@ -41,7 +41,8 @@
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
             </nav>
-            <?php echo $container; ?>
+            <div class="wraper"><?php echo $container; ?></div>
+            
             <hr/>
             <footer>
                 <p class="pull-right">Page rendered in {exec_time}s using {mem_usage}mb of memory.</p>
