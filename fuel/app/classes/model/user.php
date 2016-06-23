@@ -31,4 +31,17 @@ class Model_User extends Model
         
         return $val;
     }
+    
+    public static function filter_data($input = array())
+    {
+        $data = array();
+        foreach ($input as $k => $v)
+        {
+            if(DBUtil::field_exists('users', array($k)))
+            {
+                $data[$k] = $v;
+            }
+        }
+        return $data;
+    }
 }

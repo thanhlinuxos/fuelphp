@@ -28,7 +28,7 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="<?php echo Uri::base(false);?>">Dashboard</a></li>
+                            <li class="active"><a href="<?php echo Uri::create('acp');?>">Dashboard</a></li>
                             <li><a href="<?php echo Uri::create('acp/user');?>">User</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -41,7 +41,19 @@
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
             </nav>
-            <div class="wraper"><?php echo $container; ?></div>
+            <div class="wraper">
+                <?php if (Session::get_flash('success')): ?>
+                    <div class="alert alert-success">
+                            <strong>[Success] </strong><?php echo implode('</p><p>', e((array) Session::get_flash('success'))); ?>
+                    </div>
+                <?php if (Session::get_flash('error')): ?>
+                    <div class="alert alert-danger">
+                            <strong>[Error] </strong><?php echo implode('</p><p>', e((array) Session::get_flash('error'))); ?>
+                    </div>
+                <?php endif; ?>
+                <?php endif; ?>
+                <?php echo $container; ?>
+            </div>
             
             <hr/>
             <footer>

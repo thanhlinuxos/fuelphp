@@ -2,12 +2,10 @@
 <div class="row">
     <div class="col-xs-12">
         <form class="form-horizontal" role="form" method="POST" autocomplete="off" enctype="multipart/form-data">
-    
-        
             <div class="form-group <?php if(isset($error['username'])) echo 'has-error'; ?>">
                 <label class="control-label col-sm-3" for="fullname">Username:</label>
                 <div class="col-sm-9">
-                    <input type="text" name="username" class="form-control" id="username" value="<?php echo Input::post('username'); ?>" placeholder="Enter UserName">
+                    <input type="text" name="username" class="form-control" id="username" value="<?php echo Input::post('username', isset($user) ? $user->username : ''); ?>" placeholder="Enter UserName">
                     <?php if(isset($error['username'])) echo "<small class='help-block'>" . $error['username'] . "</small>"; ?>
                 </div>
             </div>
@@ -22,7 +20,7 @@
             <div class="form-group <?php if(isset($error['email'])) echo 'has-error'; ?>">
                 <label class="control-label col-sm-3" for="fullname">Email:</label>
                 <div class="col-sm-9">
-                    <input type="text" name="email" class="form-control" id="email" value="<?php echo Input::post('email'); ?>" placeholder="Enter Email">
+                    <input type="text" name="email" class="form-control" id="email" value="<?php echo Input::post('email', isset($user) ? $user->email : ''); ?>" placeholder="Enter Email">
                     <?php if(isset($error['email'])) echo "<small class='help-block'>" . $error['email'] . "</small>"; ?>
                 </div>
             </div>
@@ -36,6 +34,5 @@
             </div>
         </form>
     </div>
-    
 </div>
 

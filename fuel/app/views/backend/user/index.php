@@ -23,7 +23,7 @@
                         <td><?php echo $row['email']?></td>
                         <td>
                             <ul class="list-inline">
-                                <li><a href="#" class="btn btn-warning btn-xs">Edit</a></li>
+                                <li><a href="<?php echo Uri::create('acp/user/edit/' . $row['id']); ?>" class="btn btn-warning btn-xs">Edit</a></li>
                                 <li>
                                     <button class="btn btn-danger btn-xs" onclick="">
                                         Delete
