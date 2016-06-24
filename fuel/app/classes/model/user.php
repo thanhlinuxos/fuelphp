@@ -27,7 +27,7 @@ class Model_User extends Model
         $val = Validation::forge($factory);
         $val->add_field('username', 'Username', 'required');
         $val->add_field('password', 'Password', 'required');
-        $val->add_field('email', 'Password', 'valid_email');
+        $val->add_field('email', 'Email', 'valid_email');
         
         return $val;
     }

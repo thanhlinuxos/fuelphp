@@ -7,6 +7,7 @@
         <?php echo Asset::css('custom.css'); ?>
         <?php echo Asset::js('jquery-2.2.3.min.js'); ?>
         <?php echo Asset::js('bootstrap.min.js'); ?>
+        <?php echo Asset::js('backend.js'); ?>
     </head>
     <body>
         <header>

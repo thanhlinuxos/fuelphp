@@ -1,16 +1,19 @@
 <?php
+use Fuel\Core\View;
+use Fuel\Core\Response;
+use Fuel\Core\Input;
 
-class Controller_Backend_User extends Controller_Template
+class Controller_Backend_User extends \Fuel\Core\Controller_Hybrid
 {
     public $template = 'backend/layout';
+    protected $format = 'json';
+    private $data = array(
+        'success' => FALSE,
+        'error' => array()
+    );
     
     public function action_index()
-    {
-        echo Agent::browser();
-            echo '-';
-            echo Agent::browser();
-            exit;
-            
+    {            
         $data = array();
         $data['rows'] = Model_User::find('all');
         $this->template->title = 'User';
@@ -19,36 +22,30 @@ class Controller_Backend_User extends Controller_Template
     
     public function action_create()
     {
-        $data = array(
-            'error' => array()
-        );
-        if(Input::method() === 'POST')
-        {
-            $val = Model_User::validate('create');
-            if($val->run())
-            {
-                $data = Model_User::filter_data(Input::post());
-                $row = Model_User::forge($data);
-                if($row->save())
-                {
-                    Session::set_flash('success', 'Created user #' . $user->id . '.');
-                    Response::redirect('acp/user');
-                }
-                else
-                {
-                    Session::set_flash('error', 'Could not create user.');
-                }
-            }
-            else
-            {
-                $data['error'] = $val->error();
-            }
-           
-        }
         $this->template->title = 'Create User';
-        $this->template->container = View::forge('backend/user/create', $data);
+        $this->template->container = View::forge('backend/user/create', $this->data);
     }
     
+    public function post_create()
+    {
+        $val = Model_User::validate('create');
+        if($val->run())
+        {
+            $data = Model_User::filter_data(Input::post());
+            $row = Model_User::forge($data);
+            if($row->save())
+            {
+                $this->data['success'] = TRUE;
+                Session::set_flash('success', 'Created successfully user #' . $row->id);
+            }
+        }
+        else
+        {
+            $this->data['error'] = $val->error_message();
+        }
+        $this->response($this->data);
+    }
+
     public function action_edit($id = NULL)
     {
         is_null($id) and Response::redirect('acp/user');
