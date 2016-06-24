@@ -56,31 +56,34 @@ class Controller_Backend_User extends \Fuel\Core\Controller_Hybrid
             Response::redirect('acp/user');
         }
         
-        $data = array(
-            'error' => array()
-        );
-        
+        $this->template->set_global('user', $user, false);
+        $this->template->title = 'Edit User';
+        $this->template->container = View::forge('backend/user/edit', $data);
+    }
+    
+    public function post_edit()
+    {
         $val = Model_User::validate('edit');
         if($val->run())
-        {
-            $data = Model_User::filter_data(Input::post());
-            $row = Model_User::forge($data);
-            print_r($user);
-            echo '<hr>';
-            print_r($data);
-            echo '<hr>';
-            print_r($row);
-            exit;
+        {         
+            if($row->save())
+            {
+                $this->data['success'] = TRUE;
+                Session::set_flash('success', 'Created successfully user #' . $row->id);
+            }
+            else
+            {
+                $this->data['error'] = array('faild' => 'Can not update user #'.$row->id);
+            }
         }
         else
         {
-            if(Input::method() == 'POST')
-            {
-                
-            }
-            $this->template->set_global('user', $user, false);
+            $this->data['error'] = $val->error_message();
         }
-        $this->template->title = 'Edit User';
-        $this->template->container = View::forge('backend/user/edit', $data);
+    }
+    
+    public function delete()
+    {
+        
     }
 }
