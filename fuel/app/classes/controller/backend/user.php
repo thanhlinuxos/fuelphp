@@ -58,14 +58,15 @@ class Controller_Backend_User extends \Fuel\Core\Controller_Hybrid
         
         $this->template->set_global('user', $user, false);
         $this->template->title = 'Edit User';
-        $this->template->container = View::forge('backend/user/edit', $data);
+        $this->template->container = View::forge('backend/user/edit', $this->data);
     }
     
     public function post_edit()
     {
         $val = Model_User::validate('edit');
         if($val->run())
-        {         
+        {
+            
             if($row->save())
             {
                 $this->data['success'] = TRUE;
@@ -80,6 +81,7 @@ class Controller_Backend_User extends \Fuel\Core\Controller_Hybrid
         {
             $this->data['error'] = $val->error_message();
         }
+        $this->response($this->data);
     }
     
     public function delete()

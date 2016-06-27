@@ -17,6 +17,7 @@ $(function () {
         }    
         $form.find('.has-error').removeClass('has-error');
         $form.find('.form_error').empty();
+
         // POST
         var posting = $.post(URL, FormData);
         posting.done(function(data) {
