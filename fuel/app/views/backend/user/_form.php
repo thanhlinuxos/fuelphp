@@ -6,7 +6,7 @@
                 <label class="control-label col-sm-3" for="fullname">Username:</label>
                 <div class="col-sm-9">
                     <input type="text" name="username" class="form-control" id="username" value="<?php echo Input::post('username', isset($user) ? $user->username : ''); ?>" placeholder="Enter UserName">
-                    <small class='help-block form_error'>sdsdsds</small>
+                    <small class='help-block form_error'></small>
                 </div>
             </div>
             <div class="form-group">

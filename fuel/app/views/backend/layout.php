@@ -5,6 +5,10 @@
         <title><?php echo $title; ?></title>
         <?php echo Asset::css('bootstrap.css'); ?>
         <?php echo Asset::css('custom.css'); ?>
+        <?php
+            Asset::js("var BASE_URL = '" . Uri::base(FALSE)."', REGION = '".Lang::get_lang()."';", array(), 'DEFINED_VAR', true);
+            echo Asset::render('DEFINED_VAR');
+        ?>
         <?php echo Asset::js('jquery-2.2.3.min.js'); ?>
         <?php echo Asset::js('bootstrap.min.js'); ?>
         <?php echo Asset::js('backend.js'); ?>

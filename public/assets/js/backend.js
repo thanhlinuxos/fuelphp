@@ -1,5 +1,4 @@
 $(function () {
-    var BASE_URL = 'http://fuelphp.local/';
     
     var FormList = ['user-form'];
     for(var i = 0; i < FormList.length; i++) {
@@ -16,29 +15,27 @@ $(function () {
         if (typeof URL === 'undefined') {
             URL = window.location.href;
         }    
+        $form.find('.has-error').removeClass('has-error');
         $form.find('.form_error').empty();
-
+        // POST
         var posting = $.post(URL, FormData);
         posting.done(function(data) {
             if(data.success == true) {
                 switch(FormID) {
                     case 'user-form':
-                        uri = 'acp/user';
+                        request_uri = 'acp/user';
                         break;
                     default:
-                        uri = '';
+                        request_uri = '';
                 }
-                window.location.href = BASE_URL + uri;
+                window.location.href = BASE_URL + request_uri;
             } else {
                 for(var key in data.error){
-                    var input = $form.getElementsByName[key];
-                    console.log(input);
+                    var input = $form.find('input[name="'+key+'"]');
+                    input.parent().find('.form_error').html(data.error[key])
+                    input.parent().parent().addClass('has-error');
                 }
-               
             }
-        });
-        
-        
-        
+        }); 
     }
 });
