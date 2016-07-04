@@ -24,6 +24,14 @@
                     <small class='help-block form_error'></small>
                 </div>
             </div>
+            
+            <div class="form-group">
+                <label class="control-label col-sm-3" for="image">Image:</label>
+                <div class="col-sm-9">
+                    <input type="file" id="file_upload" name="image" value="chose image" />
+                    <small class='help-block form_error'></small>
+                </div>
+            </div>
 
 
             <div class="form-group">

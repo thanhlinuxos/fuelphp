@@ -1,15 +1,22 @@
 <?php
 
 return array(
-    'enabled' => TRUE,
-    'url'     => 'http://browsers.garykeith.com/stream.asp?BrowsCapINI',
-    'method' => 'wrapper',
-    'proxy' => array(
-        'host' => null,
-        'port' => null,
-        'auth' => 'none',
-        'username' => null,
-        'password' => null,
+    'browscap' => array(
+        'enabled' => TRUE,
+        'url'     => 'http://browscap.org/stream?q=BrowsCapINI',
+        'method' => 'wrapper',
+        'proxy' => array(
+            'host' => null,
+            'port' => null,
+            'auth' => 'none',
+            'username' => null,
+            'password' => null,
+        ),
+        'file'   => APPPATH . 'php_browscap.ini'
     ),
-    'file'   => 'C:\xampp\php\php_browscap.ini',
+    'cache' => array(
+        'driver'     => '',
+        'expiry'     => 604800,
+        'identifier' => 'fuel.agent',
+    )
 );

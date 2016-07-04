@@ -13,7 +13,7 @@ class Controller_Backend_User extends \Fuel\Core\Controller_Hybrid
     );
     
     public function action_index()
-    {            
+    {
         $data = array();
         $data['rows'] = Model_User::find('all');
         $this->template->title = 'User';
