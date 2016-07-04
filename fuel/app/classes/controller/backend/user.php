@@ -58,28 +58,38 @@ class Controller_Backend_User extends \Fuel\Core\Controller_Hybrid
         
         $this->template->set_global('user', $user, false);
         $this->template->title = 'Edit User';
-        $this->template->container = View::forge('backend/user/edit', $data);
+        $this->template->container = View::forge('backend/user/edit', $this->data);
     }
     
-    public function post_edit()
+    public function post_edit($id = NULL)
     {
         $val = Model_User::validate('edit');
         if($val->run())
-        {         
-            if($row->save())
+        {
+            $post = array(
+                'username' => $val->validated('username'),
+                'password' => $val->validated('password'),
+                'email' => $val->validated('email')
+            );
+            if (!empty($val->validated('password'))) {
+                //$post['password'] = Model_Service_Util::hash_password($val->validated('password'));
+            }
+            
+            if(Model_User::update_data($id, $post))
             {
                 $this->data['success'] = TRUE;
-                Session::set_flash('success', 'Created successfully user #' . $row->id);
+                Session::set_flash('success', 'Created successfully user #' . $id);
             }
             else
             {
-                $this->data['error'] = array('faild' => 'Can not update user #'.$row->id);
+                $this->data['error'] = array('faild' => 'Can not update user #'.$id);
             }
         }
         else
         {
             $this->data['error'] = $val->error_message();
         }
+        $this->response($this->data);
     }
     
     public function delete()

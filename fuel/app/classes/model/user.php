@@ -44,4 +44,19 @@ class Model_User extends Model
         }
         return $data;
     }
+    
+    public static function update_data($id, $data)
+    {
+        try {
+            //$data['updated_at'] = Date::forge()->get_timestamp();
+            $query = Model_User::find($id);
+            $query->set($data);
+            $query->save();
+        } catch (Exception $e) {
+            Log::write('ERROR', $e->getMessage());
+            return false;
+        }
+
+        return true;
+    }
 }

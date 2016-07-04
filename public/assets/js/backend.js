@@ -9,6 +9,7 @@ $(function () {
     }
     
     function SubmitForm($form) {
+        console.log('SubmitForm: ' + $form.attr('id'));
         var FormID = $form.attr('id'),
             FormData = $form.serialize(),
             URL = $form.attr('action');
@@ -17,6 +18,8 @@ $(function () {
         }    
         $form.find('.has-error').removeClass('has-error');
         $form.find('.form_error').empty();
+        console.log('URL: '+URL);
+        console.log('FormData: '+FormData);
         // POST
         var posting = $.post(URL, FormData);
         posting.done(function(data) {

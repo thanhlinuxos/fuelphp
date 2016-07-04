@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'enabled' => FALSE,
+    'enabled' => TRUE,
     'url'     => 'http://browsers.garykeith.com/stream.asp?BrowsCapINI',
     'method' => 'wrapper',
     'proxy' => array(
