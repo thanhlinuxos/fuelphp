@@ -3,6 +3,9 @@ use Orm\Model;
 
 class Model_User extends Model
 {
+    protected static $_table_name = 'users';
+    protected static $_primary_key = ['id'];
+
     protected static $_properties = array(
         'id',
         'username',
@@ -12,7 +15,7 @@ class Model_User extends Model
         'updated_at'
     );
     
-    protected  static$_observers = array(
+    protected static$_observers = array(
         'Orm\Observer_CreatedAt' => array(
             'events' => array('before_insert'),
             'mysql_timestamp' => false,
@@ -23,7 +26,7 @@ class Model_User extends Model
         ),
     );
     
-    public static function validate($factory) {
+    public static function validate_data($factory) {
         $val = Validation::forge($factory);
         $val->add_field('username', 'Username', 'required');
         $val->add_field('password', 'Password', 'required');

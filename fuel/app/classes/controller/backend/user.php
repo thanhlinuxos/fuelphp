@@ -1,28 +1,14 @@
 <?php
-use Fuel\Core\View;
-use Fuel\Core\Response;
-use Fuel\Core\Input;
-
-class Controller_Backend_User extends \Fuel\Core\Controller_Hybrid
-{
-    public $template = 'backend/layout';
-    protected $format = 'json';
-    private $data = array(
-        'success' => FALSE,
-        'error' => array()
-    );
-    
+class Controller_Backend_User extends Controller_Backend_Base
+{ 
     public function action_index()
     {
-        $data = array();
-        $data['rows'] = Model_User::find('all');
-        $this->template->title = 'User';
-        $this->template->container = View::forge('backend/user/index', $data);
+        $this->data['rows'] = Model_User::find('all');
+        $this->template->container = View::forge('backend/user/index', $this->data);
     }
     
     public function action_create()
     {
-        $this->template->title = 'Create User';
         $this->template->container = View::forge('backend/user/create', $this->data);
     }
     
@@ -57,7 +43,6 @@ class Controller_Backend_User extends \Fuel\Core\Controller_Hybrid
         }
         
         $this->template->set_global('user', $user, false);
-        $this->template->title = 'Edit User';
         $this->template->container = View::forge('backend/user/edit', $this->data);
     }
     
