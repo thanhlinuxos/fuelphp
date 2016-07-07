@@ -5,8 +5,13 @@
  * @var		array
  */
 return array(
+    'Controller_Backend_Dashboard' => array(
+        'index_title' => 'Dashboard',
+    ),
     'Controller_Backend_User' => array(
-        'index_title' => 'Danh sách thành viên'
+        'index_title' => 'List User',
+        'create_title' => 'Create User',
+        'edit_title' => 'Update User'
     )
 );
 

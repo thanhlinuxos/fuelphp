@@ -5,7 +5,7 @@ use Fuel\Core\Response;
 use Fuel\Core\Input;
 use Fuel\Core\Lang;
 
-class Controller_Backend_Base extends Controller_Hybrid
+class Controller_Frontend_Base extends Controller_Hybrid
 {
     protected $format = 'json';
     protected $controller;
@@ -15,18 +15,12 @@ class Controller_Backend_Base extends Controller_Hybrid
         'error' => array()
     );
     
-    
     public function before()
     {
-        $this->controller = Request::active()->controller;
-        $this->action = Request::active()->action;
-        Lang::load('back_end');
+        Lang::load('front_end');
         $this->render_template();
         parent::before();
-        $this->set_title();
     }
-    
-    
     
     public function after($response)
     {
@@ -38,18 +32,10 @@ class Controller_Backend_Base extends Controller_Hybrid
     {
         switch($this->action) {
             case 'login':
-                $this->template = 'backend/login';
+                $this->template = 'frontend/login';
                 break;
             default :
-                $this->template = 'backend/layout';
-        }
-    }
-    
-    private function set_title()
-    {
-        if (is_object($this->template)) {
-            $title = Lang::get($this->controller . '.' . $this->action . '_title');
-            $this->template->title = $title ? $title : 'FuelPHP';
+                $this->template = 'frontend/layout';
         }
     }
 }
