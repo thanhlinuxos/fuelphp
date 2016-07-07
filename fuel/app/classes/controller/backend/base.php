@@ -4,6 +4,7 @@ use Fuel\Core\View;
 use Fuel\Core\Response;
 use Fuel\Core\Input;
 use Fuel\Core\Lang;
+use \Fuel\Core\Config;
 
 class Controller_Backend_Base extends Controller_Hybrid
 {
@@ -20,10 +21,12 @@ class Controller_Backend_Base extends Controller_Hybrid
     {
         $this->controller = Request::active()->controller;
         $this->action = Request::active()->action;
+        Config::set('language', 'vi');
         Lang::load('back_end');
         $this->render_template();
         parent::before();
         $this->set_title();
+        $this->menu_active();
     }
     
     
@@ -50,6 +53,14 @@ class Controller_Backend_Base extends Controller_Hybrid
         if (is_object($this->template)) {
             $title = Lang::get($this->controller . '.' . $this->action . '_title');
             $this->template->title = $title ? $title : 'FuelPHP';
+        }
+    }
+    
+    private function menu_active()
+    {
+        if (is_object($this->template)) {
+            $tmp = explode('_',$this->controller);
+            $this->template->menu_active = strtolower(end($tmp));
         }
     }
 }

@@ -29,13 +29,13 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Project name</a>
+                        <a class="navbar-brand" href="<?php echo Uri::create('acp');?>">Project name</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="<?php echo Uri::create('acp');?>">Dashboard</a></li>
-                            <li><a href="<?php echo Uri::create('acp/user');?>">User</a></li>
-                            <li class="dropdown">
+                            <li class="<?php if($menu_active === 'dashboard') echo 'active'; ?>"><a href="<?php echo Uri::create('acp');?>">Dashboard</a></li>
+                            <li class="<?php if($menu_active === 'user') echo 'active'; ?>"><a href="<?php echo Uri::create('acp/user');?>">User</a></li>
+                            <li class="dropdown <?php if(in_array($menu_active, array('system'))) echo 'active'; ?>">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Action</a></li>
