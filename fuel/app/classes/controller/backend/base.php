@@ -4,7 +4,7 @@ use Fuel\Core\View;
 use Fuel\Core\Response;
 use Fuel\Core\Input;
 use Fuel\Core\Lang;
-use \Fuel\Core\Config;
+use Fuel\Core\Config;
 
 class Controller_Backend_Base extends Controller_Hybrid
 {
