@@ -14,7 +14,7 @@ class Controller_Backend_User extends Controller_Backend_Base
     
     public function post_create()
     {
-        $val = Model_User::validate('create');
+        $val = Model_User::validate_data('create');
         if($val->run())
         {
             $data = Model_User::filter_data(Input::post());
@@ -48,7 +48,7 @@ class Controller_Backend_User extends Controller_Backend_Base
     
     public function post_edit($id = NULL)
     {
-        $val = Model_User::validate('edit');
+        $val = Model_User::validate_data('edit');
         if($val->run())
         {
             $post = array(
