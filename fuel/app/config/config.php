@@ -23,7 +23,7 @@ return array(
 	 *
 	 * Set this to null to have it automatically detected.
 	 */
-	// 'base_url'  => null,
+	 'base_url'  => 'http://fuelphp.local/',
 
 	/**
 	 * url_suffix - Any suffix that needs to be added to
@@ -77,14 +77,14 @@ return array(
 	/**
 	 * Localization & internationalization settings
 	 */
-	// 'language'           => 'en', // Default language
-	// 'language_fallback'  => 'en', // Fallback language when file isn't available for default language
-	// 'locale'             => 'en_US', // PHP set_locale() setting, null to not set
+	 'language'           => 'vi', // Default language
+	 'language_fallback'  => 'vi', // Fallback language when file isn't available for default language
+	 'locale'             => 'vi_VN', // PHP set_locale() setting, null to not set
 
 	/**
 	 * Internal string encoding charset
 	 */
-	// 'encoding'  => 'UTF-8',
+	 'encoding'  => 'UTF-8',
 
 	/**
 	 * DateTime settings
@@ -93,7 +93,7 @@ return array(
 	 * default_timezone		optional, if you want to change the server's default timezone
 	 */
 	// 'server_gmt_offset'  => 0,
-	// 'default_timezone'   => null,
+	 'default_timezone'   => 'Asia/Ho_Chi_Minh',
 
 	/**
 	 * Logging Threshold.  Can be set to any of the following:
@@ -204,12 +204,9 @@ return array(
 	/**
 	 * Validation settings
 	 */
-	// 'validation' => array(
-		/**
-		 * Whether to fallback to global when a value is not found in the input array.
-		 */
-		// 'global_input_fallback' => true,
-	// ),
+	'validation' => array(
+            'global_input_fallback' => true,
+	),
 
 	/**
 	 * Controller class prefix
@@ -259,7 +256,7 @@ return array(
 	/**************************************************************************/
 	/* Always Load                                                            */
 	/**************************************************************************/
-	// 'always_load'  => array(
+	'always_load'  => array(
 
 		/**
 		 * These packages are loaded on Fuel's startup.
@@ -272,9 +269,11 @@ return array(
 		 *     array('auth'	=> PKGPATH.'auth/')
 		 * );
 		 */
-		// 'packages'  => array(
-		// 	//'orm',
-		// ),
+                'packages'  => array(
+                    'orm',
+                    'auth',
+                    'my'
+                ),
 
 		/**
 		 * These modules are always loaded on Fuel's startup. You can specify them
@@ -310,6 +309,6 @@ return array(
 		 * If you don't want the lang in a group use null as groupname.
 		 */
 		// 'language'  => array(),
-	// ),
+	),
 
 );
